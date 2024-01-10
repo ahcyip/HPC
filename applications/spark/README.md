@@ -20,9 +20,9 @@ Apptainer.
 and Eagle has the old software.
 
 Existing containers on Kestrel and Eagle:
-- Spark 3.4.1 and Python 3.11 is at `/datasets/images/apache_spark/spark341_py311.tar`.
+- Spark 3.5.0 and Python 3.11 is at `/kfs2/pdatasets/images/apache_spark/spark350_py311.sif`.
 This image includes the packages `ipython`, `jupyter`, `numpy`, `pandas`, and `pyarrow`.
-- Spark 3.3.1 and R 4.0.4 is at `/datasets/images/apache_spark/spark_r.sif`.
+- Spark 3.3.1 and R 4.0.4 is at `/kfs2/pdatasets/images/apache_spark/spark_r.sif`.
 This image includes the packages `tidyverse`, `sparklyr`, `data.table`, `here`, `janitor`, and
 `skimr`.
 
@@ -88,13 +88,13 @@ Eagle with ideal node types.
     Pass the path of the container that you want to use with the `-c` option.
 
     ```
-    $ configure_and_start_spark.sh -c /datasets/images/apache_spark/spark341_py311.sif
+    $ configure_and_start_spark.sh -c /kfs2/pdatasets/images/apache_spark/spark350_py311.sif
     ```
 
     **Note**: If you logged into the compute node manually with ssh or are using multiple
     Slurm allocations, specify the Slurm job IDs on the command line, like this:
     ```
-    $ configure_and_start_spark.sh -c /datasets/images/apache_spark/spark341_py311.sif <SLURM_JOB_ID_1> <SLURM_JOB_ID_2>
+    $ configure_and_start_spark.sh -c /kfs2/pdatasets/images/apache_spark/spark350_py311.sif <SLURM_JOB_ID_1> <SLURM_JOB_ID_2>
     ```
 
 3. Set this environment variable so that your jobs use the Spark configuration settings that you
